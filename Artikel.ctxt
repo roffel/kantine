@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.params=naam\ prijs
+comment0.target=Artikel(java.lang.String,\ double)
+comment0.text=\r\n\ Constructor\:\r\n\ Initialiseer\ de\ velden\ voor\ het\ artikel\ via\ parameters\r\n\ @param\ naam\ De\ naam\ voor\ het\ artikel\r\n\ @param\ prijs\ De\ prijs\ voor\ het\ artikels\r\n
+comment1.params=
+comment1.target=Artikel()
+comment1.text=\r\n\ Constructor\:\r\n\ Initialiseer\ de\ velden\ voor\ het\ artikel\ zonder\ data\r\n
+comment2.params=
+comment2.target=java.lang.String\ getNaam()
+comment2.text=\r\n\ Methode\:\r\n\ Return\ de\ naam\ van\ het\ artikel\r\n\ @return\ naam;\r\n
+comment3.params=
+comment3.target=double\ getPrijs()
+comment3.text=\r\n\ Methode\:\r\n\ Return\ de\ prijs\ van\ het\ artikel\r\n\ @return\ prijs\r\n
+comment4.params=naam
+comment4.target=void\ setNaam(java.lang.String)
+comment4.text=\r\n\ Methode\:\r\n\ Defineer\ een\ nieuwe\ naam\ voor\ het\ artikel\r\n\ @param\ naam\r\n
+comment5.params=prijs
+comment5.target=void\ setPrijs(double)
+comment5.text=\r\n\ Methode\:\r\n\ Defineer\ een\ nieuwe\ prijs\ voor\ het\ artikel\r\n\ @param\ prijs\r\n
+comment6.params=
+comment6.target=void\ drukAf()
+comment6.text=\r\n\ Methode\:\r\n\ Laat\ de\ gegevens\ van\ het\ artikel\ zien\ in\ een\ terminal-venster\r\n
+numComments=7
