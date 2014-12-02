@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+import java.util.*;
 
 /**
  * class Kassa - Alle bewerkingen en informatie voor een kassa
@@ -31,8 +31,8 @@ public class Kassa
      */
     public void rekenAf(Persoon persoon)
     {
-        double betaling = persoon.getTotaalPrijs();
-        verkochteArtikelen += persoon.getAantalArtikelen();
+        double betaling = getTotaalPrijs(persoon);
+        verkochteArtikelen += getAantalArtikelen(persoon);
         inKas += betaling;
     }
     
@@ -69,5 +69,26 @@ public class Kassa
     {
         verkochteArtikelen = 0;
         inKas = 0;
+    }
+    
+    public int getAantalArtikelen(Persoon persoon){
+        Iterator<Artikel> it = persoon.getDienblad().getArtikelIterator();
+        int aantal = 0;
+        while (it.hasNext()){
+            it.next();
+            aantal++;
+        }
+        return aantal;
+    }
+    
+    public double getTotaalPrijs(Persoon persoon){
+        double totaalPrijs = 0.00;
+        Iterator<Artikel> it = persoon.getDienblad().getArtikelIterator();
+        while (it.hasNext()){
+            Artikel artikel = it.next();
+            totaalPrijs += artikel.getPrijs();
+        }
+        
+        return totaalPrijs;
     }
 }

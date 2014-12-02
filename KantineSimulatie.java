@@ -32,13 +32,13 @@ public class KantineSimulatie {
              // verwerk rij voor de kassa
              kantine.verwerkRijVoorKassa();
              // toon dagtotalen (artikelen en geld in kassa)
-             System.out.println("Aantal artikelen verkocht: " + kantine.aantalArtikelen());
+             System.out.println("Aantal artikelen verkocht: " + kantine.getKassa().aantalArtikelen());
              
-             double geld = kantine.hoeveelheidGeldInKassa();
+             double geld = kantine.getKassa().hoeveelheidGeldInKassa();
              System.out.println("Geld in kassa: " +  Math.round(geld * 100.0)/100.0);
              System.out.println();
              // reset de kassa voor de volgende dag
-             kantine.resetKassa();
+             kantine.getKassa().resetKassa();
          }
      }
 }

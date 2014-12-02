@@ -238,37 +238,16 @@ public class Persoon
     * Methode om een artikel op een dienblad te zetten. 
     * @param artikel
     */
+   /*
     public void pakArtikel(Artikel artikel)
     {
         if(dienblad != null) {
            dienblad.voegToe(artikel);
         }
     }
-    
-    /**
-    * Methode om totaalprijs van artikelen op dienblad dat bij de persoon hoort uit te rekenen
-    * @return totaalprijs
     */
-    public double getTotaalPrijs()
-    {
-        double totaalPrijs = 0;
-        if(dienblad != null) {
-            totaalPrijs =  dienblad.getTotaalPrijs();
-        }
-        return totaalPrijs;
-    }
-
-    /**
-    * Methode om aantal producten van het dienblad te halen.
-    * @return Het aantal artikelen
-    */
-    public int getAantalArtikelen()
-    {
-        int aantalArtikelen = 0;
-        if(dienblad != null) {
-            aantalArtikelen = dienblad.getAantalArtikelen();
-        }
-        return aantalArtikelen;
+    public Dienblad getDienblad(){
+        return dienblad;
     }
 
     

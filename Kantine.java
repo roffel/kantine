@@ -28,8 +28,8 @@ public class Kantine {
          Artikel artikel2 = new Artikel("Tosti",1.90);
          
          persoon1.pakDienblad(dienblad1);
-         persoon1.pakArtikel(artikel1);
-         persoon1.pakArtikel(artikel2);
+         persoon1.getDienblad().voegToe(artikel1);
+         persoon1.getDienblad().voegToe(artikel2);
          
          kassarij.sluitAchteraan(persoon1);
      }
@@ -42,27 +42,9 @@ public class Kantine {
              kassa.rekenAf(staatBijKassa);
         }
      }
-     /**
-     * Deze methode telt het geld uit de kassa
-     * @return hoeveelheid geld in kassa
-     */
-     public double hoeveelheidGeldInKassa() {
-        return kassa.hoeveelheidGeldInKassa();
+     
+     public Kassa getKassa(){
+         return kassa;
      }
-     /**
-     * Deze methode geeft het aantal gepasseerde artikelen.
-     * @return het aantal gepasseerde artikelen
-     */
-     public int aantalArtikelen(){
-         return kassa.aantalArtikelen();
-     }
-    
-     /**
-     * Deze methode reset de bijgehouden telling van
-     * het aantal artikelen
-     * en "leegt" de inhoud van de kassa.
-     */
-     public void resetKassa() {
-         kassa.resetKassa();
-     }
+
 }
