@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.params=bsn\ voornaam\ achternaam\ geboorteDag\ geboorteMaand\ geboorteJaar\ geslacht\ medewerkersNummer\ magAchterKassa
+comment0.target=KantineMedewerker(int,\ java.lang.String,\ java.lang.String,\ int,\ int,\ int,\ char,\ int,\ boolean)
+comment0.text=\r\n\ Constructor\:\r\n\ Initialiseer\ de\ velden\ voor\ een\ persoon\r\n\ @params\ bsn,\ voornaam,\ achternaam,\ geboorteDag,\ geboorteMaand,\ geboorteJaar,\ geslacht,\ medewerkersNummer,\ magAchterKassa\r\n
+comment1.params=
+comment1.target=int\ getMedewerkersNummer()
+comment1.text=\r\n\ Methode\ -\ Geeft\ het\ medewerkersNummer\ terug\r\n\ \r\n\ @return\ medewerkersNummer\ \ \ \ \ \ \ \ Het\ nummer\ van\ een\ KantineMedewerker\ \r\n
+comment2.params=
+comment2.target=boolean\ getMagAchterKassa()
+comment2.text=\r\n\ Methode\ -\ Geeft\ true/false\ terug\ van\ magAchterKassa\r\n\ \r\n\ @return\ magAchterKassa\ \ \ \ \ \ \ \ De\ waarde\ van\ een\ magAchterKassa\ \r\n
+comment3.params=medewerkersNummer
+comment3.target=void\ setMedewerkersNummer(int)
+comment3.text=\r\n\ Methode\ -\ Zet\ het\ medewerkersNummer\ \r\n\ \r\n\ @param\ medewerkersNummer\r\n
+comment4.params=magAchterKassa
+comment4.target=void\ setMagAchterKassa(boolean)
+comment4.text=\r\n\ Methode\ -\ Zet\ de\ waarde\ voor\ magAchterKassa\r\n\ \r\n\ @param\ magAchterKassa\r\n
+comment5.params=
+comment5.target=void\ drukAf()
+numComments=6

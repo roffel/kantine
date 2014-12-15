@@ -238,14 +238,6 @@ public class Persoon
     * Methode om een artikel op een dienblad te zetten. 
     * @param artikel
     */
-   /*
-    public void pakArtikel(Artikel artikel)
-    {
-        if(dienblad != null) {
-           dienblad.voegToe(artikel);
-        }
-    }
-    */
     public Dienblad getDienblad(){
         return dienblad;
     }

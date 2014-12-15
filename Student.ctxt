@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.params=bsn\ voornaam\ achternaam\ geboorteDag\ geboorteMaand\ geboorteJaar\ geslacht\ studentNummer\ studieRichting
+comment0.target=Student(int,\ java.lang.String,\ java.lang.String,\ int,\ int,\ int,\ char,\ int,\ java.lang.String)
+comment0.text=\r\n\ Constructor\:\r\n\ Initialiseer\ de\ velden\ voor\ een\ persoon\r\n\ @params\ bsn,\ voornaam,\ achternaam,\ geboorteDag,\ geboorteMaand,\ geboorteJaar,\ geslacht,\ studentNummer,\ studieRichting\r\n
+comment1.params=
+comment1.target=int\ getStudentNummer()
+comment1.text=\r\n\ Methode\ -\ Geeft\ het\ studentnummer\ terug\r\n\ \r\n\ @return\ studentNummer\ \ \ \ \ \ \ \ Het\ nummer\ van\ een\ student\ \r\n
+comment2.params=
+comment2.target=java.lang.String\ getStudieRichting()
+comment2.text=\r\n\ Methode\ -\ Geeft\ de\ studie\ richting\ terug\r\n\ \r\n\ @return\ studie\ richting\ \ \ \ \ \ De\ studie\ richting\ van\ een\ student\ \r\n
+comment3.params=studentNummer
+comment3.target=void\ setStudentNummer(int)
+comment3.text=\r\n\ Methode\ -\ Zet\ het\ studentnummer\ \r\n\ \r\n\ @param\ studentNummer\r\n
+comment4.params=studieRichting
+comment4.target=void\ setStudieRichting(java.lang.String)
+comment4.text=\r\n\ Methode\ -\ Zet\ de\ studie\ richting\ \r\n\ \r\n\ @param\ studieRichting\r\n
+comment5.params=
+comment5.target=void\ drukAf()
+numComments=6
