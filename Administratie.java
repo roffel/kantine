@@ -5,8 +5,6 @@ public class Administratie {
    * @param aantal
    * @return het gemiddelde
    */
-  
-  
   private static final int DAYS_IN_WEEK = 7;
   
   private Administratie(){

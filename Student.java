@@ -66,10 +66,13 @@ public class Student extends Persoon
         this.studieRichting = studieRichting;
     }
     
-    public void drukAf()
+    /** 
+     * Overschrijven van toString methode
+     * @return de gegevens van de student in een string
+     */
+    public String toString()
     {
-        System.out.println("StudentNR: " + getStudentNummer());
-        System.out.println("Studierichting: " + getStudieRichting());
+        return  "StudentNR: " + getStudentNummer() + "\nStudierichting: " + getStudieRichting();
     }
     
 }

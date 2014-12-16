@@ -35,7 +35,7 @@ public class KantineSimulatie {
     //private static final int MIN_PERSONEN_PER_DAG=50;
     // private static final int MAX_PERSONEN_PER_DAG=100;
     // minimum en maximum artikelen per persoon
-    private static final int MIN_ARTIKELEN_PER_PERSOON=1;
+    private static final int MIN_ARTIKELEN_PER_jPERSOON=1;
     private static final int MAX_ARTIKELEN_PER_PERSOON=2;
 
     /**
@@ -76,20 +76,20 @@ public class KantineSimulatie {
                     persoon1 = new Student(1234,"Lammerd","Geertema",28,2,1984,'m',4321,"ICT");
                     dienblad1 = new Dienblad();
                     persoon1.pakDienblad(dienblad1);
-                    persoon1.drukAf();
+                    System.out.println(persoon1.toString());
                 }
                 else if (randomNum >= STUDENTEN_PER_DAG_KANS && randomNum < STUDENTEN_PER_DAG_KANS+DOCENTEN_PER_DAG_KANS ) {
                     //Voeg docenten toe
                     persoon1 = new Docent(1234,"Geert","Lammerda",28,2,1984,'m',"GEER","Concierge");
                     dienblad1 = new Dienblad();
                     persoon1.pakDienblad(dienblad1);
-                    persoon1.drukAf();
+                    System.out.println(persoon1.toString());
                 } else {
                     //Voeg kantinemedewerkers toe
                     persoon1 = new KantineMedewerker(1234,"Dave","Schoffel",28,2,1984,'m',9876,false);
                     dienblad1 = new Dienblad();
                     persoon1.pakDienblad(dienblad1);   
-                    persoon1.drukAf();
+                    System.out.println(persoon1.toString());
                 }
                 // bedenk hoeveel artikelen worden gepakt
                 int aantalartikelen = getRandomValue(MIN_ARTIKELEN_PER_PERSOON, MAX_ARTIKELEN_PER_PERSOON);

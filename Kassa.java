@@ -25,15 +25,34 @@ public class Kassa
 
     /**
      * Vraag het aantal artikelen en de totaalprijs.
-     * De implementatie wordt later vervangen.
-     * door een echte betaling door de persoon
+     * en controleer als het persoon genoeg saldo heeft
+     * om de transactie te maken.
      * @param persoon die moet afrekenen
      */
     public void rekenAf(Persoon persoon)
     {
         double betaling = getTotaalPrijs(persoon);
-        verkochteArtikelen += getAantalArtikelen(persoon);
-        inKas += betaling;
+        double kortingsPercentage = 0.00;
+        double kortingsBedrag = 0.00;
+        boolean heeftMaximum = false;
+        
+        if (persoon instanceof KortingskaartHouder) {
+            KortingskaartHouder kaartHouder = (KortingskaartHouder) persoon;
+            kortingsPercentage = kaartHouder.geefKortingsPercentage();
+            heeftMaximum = kaartHouder.heeftMaximum();
+            if (kortingsPercentage > 0){
+                kortingsBedrag = betaling * kortingsPercentage;
+            }
+            if (heeftMaximum){
+                kortingsBedrag = Math.min(kortingsBedrag, kaartHouder.geefMaximum());
+            }
+        }
+        if (persoon.getBetaalwijze().betaal(betaling-kortingsBedrag)) {
+            verkochteArtikelen += getAantalArtikelen(persoon);
+            inKas += betaling;
+        } else {
+            System.out.println("Niet genoeg saldo!");
+        }
     }
     
     /**

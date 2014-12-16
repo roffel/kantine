@@ -7,7 +7,7 @@
  * @author Rutger Roffel & Patrick Swijgman
  * @version 1.0
  */
-public class Docent extends Persoon
+public class Docent extends Persoon implements KortingskaartHouder
 {
     // instance variables - replace the example below with your own
     private String afkorting;
@@ -65,11 +65,29 @@ public class Docent extends Persoon
     public String getAfdeling(){
         return afdeling;
     }
-    
-    public void drukAf()
+
+    /** 
+     * Overschrijven van toString methode
+     * @return de gegevens van de student in een string
+     */
+    public String toString()
     {
-        System.out.println("Afkorting: " + getAfkorting());
-        System.out.println("Afdeling: " + getAfdeling());
+        return  "Afkorting: " + getAfkorting() + "\nAfdeling: " + getAfdeling();
     }
     
+    
+    public double geefKortingsPercentage()
+    {
+        return 0.25;
+    }
+    
+    public boolean heeftMaximum()
+    {
+        return true;
+    }
+    
+    public double geefMaximum()
+    {
+        return 1.0;
+    }
 }

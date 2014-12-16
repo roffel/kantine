@@ -15,5 +15,6 @@ comment4.params=studieRichting
 comment4.target=void\ setStudieRichting(java.lang.String)
 comment4.text=\r\n\ Methode\ -\ Zet\ de\ studie\ richting\ \r\n\ \r\n\ @param\ studieRichting\r\n
 comment5.params=
-comment5.target=void\ drukAf()
+comment5.target=java.lang.String\ toString()
+comment5.text=\ \r\n\ Overschrijven\ van\ toString\ methode\r\n\ @return\ de\ gegevens\ van\ de\ student\ in\ een\ string\r\n
 numComments=6

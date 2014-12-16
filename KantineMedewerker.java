@@ -7,7 +7,7 @@
  * @author Rutger Roffel & Patrick Swijgman
  * @version 1.0
  */
-public class KantineMedewerker extends Persoon
+public class KantineMedewerker extends Persoon implements KortingskaartHouder
 {
     // instance variables - replace the example below with your own
     private int medewerkersNummer;
@@ -66,10 +66,29 @@ public class KantineMedewerker extends Persoon
         this.magAchterKassa = magAchterKassa;
     }
     
-    public void drukAf()
+    /** 
+     * Overschrijven van toString methode
+     * @return de gegevens van de student in een string
+     */
+    public String toString()
     {
-        System.out.println("MedewerkersNR: " + getMedewerkersNummer());
-        System.out.println("Mag achter de kassa: " + getMagAchterKassa());
+        return  "MedewerkersNR: " + getMedewerkersNummer() + "\nMag achter de kassa: " + getMagAchterKassa();
+    }
+    
+    
+    public double geefKortingsPercentage()
+    {
+        return 0.35;
+    }
+    
+    public boolean heeftMaximum()
+    {
+        return false;
+    }
+    
+    public double geefMaximum()
+    {
+        return 0.0;
     }
     
 }

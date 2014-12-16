@@ -10,14 +10,15 @@ public class Persoon
      * Velden:
      * Defineer de velden voor een persoon
      */
-    private int bsn;            // Bsn van persoon
-    private String voornaam;    // Voornaam van persoon
-    private String achternaam;  // Achternaam van persoon
-    private int geboorteDag;    // Geboortedag van persoon
-    private int geboorteMaand;  // Geboortemaand van persoon
-    private int geboorteJaar;   // Geboortejaar van persoon
-    private char geslacht;      // Geslacht van persoon (m/v)
-    private Dienblad dienblad;  // Dienblad van de persoon
+    private int bsn;                    // Bsn van persoon
+    private String voornaam;            // Voornaam van persoon
+    private String achternaam;          // Achternaam van persoon
+    private int geboorteDag;            // Geboortedag van persoon
+    private int geboorteMaand;          // Geboortemaand van persoon
+    private int geboorteJaar;           // Geboortejaar van persoon
+    private char geslacht;              // Geslacht van persoon (m/v)
+    private Dienblad dienblad;          // Dienblad van de persoon
+    private Betaalwijze betaalwijze;    // Hoe wil dit persoon betalen?
     
     /**
      * Constructor:
@@ -109,6 +110,24 @@ public class Persoon
             return "onbekend";
         }
     }
+    
+    /**
+     * Methode:
+     * Return de betaalwijze van een persoon
+     * @return Betaalwijze betaalwijze;
+     */
+    public Betaalwijze getBetaalwijze(){
+        return betaalwijze;
+    }
+
+    /**
+     * Methode:
+     * set de betaalwijze van een persoon
+     * @param betaalwijze
+     */
+    public void setBetaalwijze(Betaalwijze betaalwijze){
+        this.betaalwijze = betaalwijze;
+    }    
     
     /**
      * Methode:
@@ -210,17 +229,14 @@ public class Persoon
             System.out.println("De waarde "+ this.geslacht +" is geen juiste waarde voor het systeem");
         }
     }
-
-    /**
-     * Methode:
-     * Laat de gegevens zien van een persoon in een terminal-venster
+   
+    /** 
+     * Overschrijven van toString methode
+     * @return de gegevens zien van een persoon
      */
-    public void drukAf()
+    public String toString()
     {
-        System.out.println("Naam: "+ getVoornaam() + " " + getAchternaam());
-        System.out.println("BSN: "+ getBsn());
-        System.out.println("Geboortedatum: "+ getGeboortedatum());
-        System.out.println("Geslacht: "+ getGeslacht());
+        return  "Naam: "+ getVoornaam() + " " + getAchternaam() + "\nBSN: "+ getBsn()+ "\nGeboortedatum: "+ getGeboortedatum()+"\nGeslacht: "+ getGeslacht();
     }
 
     
@@ -241,6 +257,14 @@ public class Persoon
     public Dienblad getDienblad(){
         return dienblad;
     }
-
+    
+    @Override public boolean equals(Object object){
+        
+        if (object instanceof Persoon)
+        {
+            return true;
+        }
+        return false;
+    }
     
 }
